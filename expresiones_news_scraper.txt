@@ -1,0 +1,9 @@
+
+links de los titulos = $x('//h2[@data-h]/a/@href').map(x => x.value)
+$x('//h2[@data-h]/a[@href]/@href').map(x => x.value)
+
+texto de los titulos = $x('//h2[@data-h]/a/text()').map(x => x.wholeText)
+
+Resumen de la noticia = $x('//div[@class="lead"]/p/text()').map(x => x.wholeText)
+
+cuerpo de la noticia = $x('//div[@class="html-content"]/p[not(@class)]/node()').map(x => x.wholeText)
